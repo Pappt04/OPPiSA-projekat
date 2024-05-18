@@ -1,0 +1,75 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.39.33523.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/users/tamas/documents/fakultet/semestar-4/oppisa/projekat/src/lexicalanalysis.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "daa2af80b9c6b3a4e1c300cb73c4fb31efb9bf423b30bfd50afc4eedf33f77a9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/tamas/documents/fakultet/semestar-4/oppisa/projekat/src/constants.h"
+          },
+          "hashes": {
+            "sha-256": "265e5a232729372eef94812eca47008d45aec7a2644515d9afd84de2a6d09e60"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/tamas/documents/fakultet/semestar-4/oppisa/projekat/src/lexicalanalysis.h"
+          },
+          "hashes": {
+            "sha-256": "99c8a3b9bca86b468b4d4382d798fa136eed80c73c598f387d0eb975e5588354"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/tamas/documents/fakultet/semestar-4/oppisa/projekat/src/token.h"
+          },
+          "hashes": {
+            "sha-256": "62a80caaecc619b5fffbfb8d0bc3adebdca848d7406cce0f30e1aebbc366d8b0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/tamas/documents/fakultet/semestar-4/oppisa/projekat/src/types.h"
+          },
+          "hashes": {
+            "sha-256": "1fb551fd06e075106294dd37be7d2be48d08b76cbea1e9698c8b146f87e04ecb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/tamas/documents/fakultet/semestar-4/oppisa/projekat/src/finitestatemachine.h"
+          },
+          "hashes": {
+            "sha-256": "247c9e81c0a8105dab83f600310f739e701b5d50f6ad120e862b471bbc9bc556"
+          }
+        }
+      ]
+    }
+  ]
+}
