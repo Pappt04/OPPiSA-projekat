@@ -169,9 +169,13 @@ void LexicalAnalysis::printTokens()
 	{
 		printMessageHeader();
 		TokenList::iterator it = tokenList.begin();
-		for (; it != tokenList.end(); it++)
+		for (int i=0; it != tokenList.end(); it++,i++)
 		{
+			cout << i << ":	";
 			(*it).printTokenInfo();
+			
+			if ((*it).getType() == T_SEMI_COL)
+				cout << endl;
 		}
 	}
 }
