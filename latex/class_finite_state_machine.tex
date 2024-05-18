@@ -1,0 +1,41 @@
+\doxysection{Dokumentacija klase Finite\+State\+Machine}
+\hypertarget{class_finite_state_machine}{}\label{class_finite_state_machine}\index{FiniteStateMachine@{FiniteStateMachine}}
+\doxysubsubsection*{Javni članovi}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_finite_state_machine_a401c2965c93f68e22394bc56bf5d62ca}{get\+Next\+State}} (int current\+State, char transition\+Letter)
+\item 
+void \mbox{\hyperlink{class_finite_state_machine_a1393cc0e4ba1e217d4b1ec4e6703ef69}{init\+State\+Machine}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Zajednički javni članovi}
+\begin{DoxyCompactItemize}
+\item 
+static Token\+Type \mbox{\hyperlink{class_finite_state_machine_a9c6e0fa0dd525f93c4dc2375925905f6}{get\+Token\+Type}} (int state\+Number)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacija funkcija članica}
+\Hypertarget{class_finite_state_machine_a401c2965c93f68e22394bc56bf5d62ca}\label{class_finite_state_machine_a401c2965c93f68e22394bc56bf5d62ca} 
+\index{FiniteStateMachine@{FiniteStateMachine}!getNextState@{getNextState}}
+\index{getNextState@{getNextState}!FiniteStateMachine@{FiniteStateMachine}}
+\doxysubsubsection{\texorpdfstring{getNextState()}{getNextState()}}
+{\footnotesize\ttfamily int Finite\+State\+Machine\+::get\+Next\+State (\begin{DoxyParamCaption}\item[{int}]{current\+State,  }\item[{char}]{transition\+Letter }\end{DoxyParamCaption})}
+
+Returns the next state number, based on current state and transition letter \Hypertarget{class_finite_state_machine_a9c6e0fa0dd525f93c4dc2375925905f6}\label{class_finite_state_machine_a9c6e0fa0dd525f93c4dc2375925905f6} 
+\index{FiniteStateMachine@{FiniteStateMachine}!getTokenType@{getTokenType}}
+\index{getTokenType@{getTokenType}!FiniteStateMachine@{FiniteStateMachine}}
+\doxysubsubsection{\texorpdfstring{getTokenType()}{getTokenType()}}
+{\footnotesize\ttfamily Token\+Type Finite\+State\+Machine\+::get\+Token\+Type (\begin{DoxyParamCaption}\item[{int}]{state\+Number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Get token type from the number of the state \Hypertarget{class_finite_state_machine_a1393cc0e4ba1e217d4b1ec4e6703ef69}\label{class_finite_state_machine_a1393cc0e4ba1e217d4b1ec4e6703ef69} 
+\index{FiniteStateMachine@{FiniteStateMachine}!initStateMachine@{initStateMachine}}
+\index{initStateMachine@{initStateMachine}!FiniteStateMachine@{FiniteStateMachine}}
+\doxysubsubsection{\texorpdfstring{initStateMachine()}{initStateMachine()}}
+{\footnotesize\ttfamily void Finite\+State\+Machine\+::init\+State\+Machine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Call this function to initialize FSM. This function must be called before get\+Next\+Lex\+Token function. 
+
+Dokumentacija ove klase je napravljena na osnovu sledećih datoteka\+:\begin{DoxyCompactItemize}
+\item 
+src/Finite\+State\+Machine.\+h\item 
+src/Finite\+State\+Machine.\+cpp\end{DoxyCompactItemize}

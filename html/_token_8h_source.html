@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Latn">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>OPPiSA: Izvorni kod datoteke src/Token.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">OPPiSA
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Napravio Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Traži');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_token_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Token.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __TOKEN__</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __TOKEN__</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;Constants.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;Types.h&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_token.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="class_token.html">Token</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_class" href="class_token.html">Token</a>() : tokenType(T_NO_TYPE), value(<span class="stringliteral">&quot;&quot;</span>) {}</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    TokenType <a class="code hl_function" href="class_token.html#a98ffe39006c8fbb29702d1bd54327b58">getType</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_token.html#a72a5e117884ed1983ce28311ce601c64">setType</a>(TokenType t);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    std::string <a class="code hl_function" href="class_token.html#ab1b12d963e56c569a589081f4548b11a">getValue</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_token.html#a937dceea640b105e48f522075138e163">setValue</a>(std::string s);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_token.html#a77b39efed40976f7891ce093a9bf1c39">makeToken</a>(<span class="keywordtype">int</span> begin, <span class="keywordtype">int</span> end, std::vector&lt;char&gt;&amp; program, <span class="keywordtype">int</span> lastFiniteState);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_token.html#a561ca003318917e203b8f358f9f7efc8">makeErrorToken</a>(<span class="keywordtype">int</span> pos, std::vector&lt;char&gt;&amp; program);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_token.html#a71d206adaaa7d10fa81f89a787c2273f">makeEofToken</a>();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_token.html#aa1fde7347e6503ab71e5962c58fed64b">printTokenInfo</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_token.html#aeb7b648d087f0f955cb7343a8787c0d9">printTokenValue</a>();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    TokenType tokenType;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    std::string value;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    std::string tokenTypeToString(TokenType t);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>};</div>
+</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_token_html"><div class="ttname"><a href="class_token.html">Token</a></div><div class="ttdef"><b>Definition</b> Token.h:12</div></div>
+<div class="ttc" id="aclass_token_html_a561ca003318917e203b8f358f9f7efc8"><div class="ttname"><a href="class_token.html#a561ca003318917e203b8f358f9f7efc8">Token::makeErrorToken</a></div><div class="ttdeci">void makeErrorToken(int pos, std::vector&lt; char &gt; &amp;program)</div><div class="ttdef"><b>Definition</b> Token.cpp:46</div></div>
+<div class="ttc" id="aclass_token_html_a71d206adaaa7d10fa81f89a787c2273f"><div class="ttname"><a href="class_token.html#a71d206adaaa7d10fa81f89a787c2273f">Token::makeEofToken</a></div><div class="ttdeci">void makeEofToken()</div><div class="ttdef"><b>Definition</b> Token.cpp:53</div></div>
+<div class="ttc" id="aclass_token_html_a72a5e117884ed1983ce28311ce601c64"><div class="ttname"><a href="class_token.html#a72a5e117884ed1983ce28311ce601c64">Token::setType</a></div><div class="ttdeci">void setType(TokenType t)</div><div class="ttdef"><b>Definition</b> Token.cpp:16</div></div>
+<div class="ttc" id="aclass_token_html_a77b39efed40976f7891ce093a9bf1c39"><div class="ttname"><a href="class_token.html#a77b39efed40976f7891ce093a9bf1c39">Token::makeToken</a></div><div class="ttdeci">void makeToken(int begin, int end, std::vector&lt; char &gt; &amp;program, int lastFiniteState)</div><div class="ttdef"><b>Definition</b> Token.cpp:34</div></div>
+<div class="ttc" id="aclass_token_html_a937dceea640b105e48f522075138e163"><div class="ttname"><a href="class_token.html#a937dceea640b105e48f522075138e163">Token::setValue</a></div><div class="ttdeci">void setValue(std::string s)</div><div class="ttdef"><b>Definition</b> Token.cpp:28</div></div>
+<div class="ttc" id="aclass_token_html_a98ffe39006c8fbb29702d1bd54327b58"><div class="ttname"><a href="class_token.html#a98ffe39006c8fbb29702d1bd54327b58">Token::getType</a></div><div class="ttdeci">TokenType getType()</div><div class="ttdef"><b>Definition</b> Token.cpp:10</div></div>
+<div class="ttc" id="aclass_token_html_aa1fde7347e6503ab71e5962c58fed64b"><div class="ttname"><a href="class_token.html#aa1fde7347e6503ab71e5962c58fed64b">Token::printTokenInfo</a></div><div class="ttdeci">void printTokenInfo()</div><div class="ttdef"><b>Definition</b> Token.cpp:60</div></div>
+<div class="ttc" id="aclass_token_html_ab1b12d963e56c569a589081f4548b11a"><div class="ttname"><a href="class_token.html#ab1b12d963e56c569a589081f4548b11a">Token::getValue</a></div><div class="ttdeci">std::string getValue()</div><div class="ttdef"><b>Definition</b> Token.cpp:22</div></div>
+<div class="ttc" id="aclass_token_html_aeb7b648d087f0f955cb7343a8787c0d9"><div class="ttname"><a href="class_token.html#aeb7b648d087f0f955cb7343a8787c0d9">Token::printTokenValue</a></div><div class="ttdeci">void printTokenValue()</div><div class="ttdef"><b>Definition</b> Token.cpp:67</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><b>Token.h</b></li>
+    <li class="footer">Napravio <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
+</body>
+</html>

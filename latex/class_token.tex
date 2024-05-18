@@ -1,0 +1,86 @@
+\doxysection{Dokumentacija klase Token}
+\hypertarget{class_token}{}\label{class_token}\index{Token@{Token}}
+\doxysubsubsection*{Javni članovi}
+\begin{DoxyCompactItemize}
+\item 
+Token\+Type \mbox{\hyperlink{class_token_a98ffe39006c8fbb29702d1bd54327b58}{get\+Type}} ()
+\item 
+void \mbox{\hyperlink{class_token_a72a5e117884ed1983ce28311ce601c64}{set\+Type}} (Token\+Type t)
+\item 
+std\+::string \mbox{\hyperlink{class_token_ab1b12d963e56c569a589081f4548b11a}{get\+Value}} ()
+\item 
+void \mbox{\hyperlink{class_token_a937dceea640b105e48f522075138e163}{set\+Value}} (std\+::string s)
+\item 
+void \mbox{\hyperlink{class_token_a77b39efed40976f7891ce093a9bf1c39}{make\+Token}} (int begin, int end, std\+::vector$<$ char $>$ \&program, int last\+Finite\+State)
+\item 
+void \mbox{\hyperlink{class_token_a561ca003318917e203b8f358f9f7efc8}{make\+Error\+Token}} (int pos, std\+::vector$<$ char $>$ \&program)
+\item 
+void \mbox{\hyperlink{class_token_a71d206adaaa7d10fa81f89a787c2273f}{make\+Eof\+Token}} ()
+\item 
+void \mbox{\hyperlink{class_token_aa1fde7347e6503ab71e5962c58fed64b}{print\+Token\+Info}} ()
+\item 
+void \mbox{\hyperlink{class_token_aeb7b648d087f0f955cb7343a8787c0d9}{print\+Token\+Value}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacija funkcija članica}
+\Hypertarget{class_token_a98ffe39006c8fbb29702d1bd54327b58}\label{class_token_a98ffe39006c8fbb29702d1bd54327b58} 
+\index{Token@{Token}!getType@{getType}}
+\index{getType@{getType}!Token@{Token}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily Token\+Type Token\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns token type \Hypertarget{class_token_ab1b12d963e56c569a589081f4548b11a}\label{class_token_ab1b12d963e56c569a589081f4548b11a} 
+\index{Token@{Token}!getValue@{getValue}}
+\index{getValue@{getValue}!Token@{Token}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily string Token\+::get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns token value \Hypertarget{class_token_a71d206adaaa7d10fa81f89a787c2273f}\label{class_token_a71d206adaaa7d10fa81f89a787c2273f} 
+\index{Token@{Token}!makeEofToken@{makeEofToken}}
+\index{makeEofToken@{makeEofToken}!Token@{Token}}
+\doxysubsubsection{\texorpdfstring{makeEofToken()}{makeEofToken()}}
+{\footnotesize\ttfamily void Token\+::make\+Eof\+Token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates end of file token when it is reached \Hypertarget{class_token_a561ca003318917e203b8f358f9f7efc8}\label{class_token_a561ca003318917e203b8f358f9f7efc8} 
+\index{Token@{Token}!makeErrorToken@{makeErrorToken}}
+\index{makeErrorToken@{makeErrorToken}!Token@{Token}}
+\doxysubsubsection{\texorpdfstring{makeErrorToken()}{makeErrorToken()}}
+{\footnotesize\ttfamily void Token\+::make\+Error\+Token (\begin{DoxyParamCaption}\item[{int}]{pos,  }\item[{std\+::vector$<$ char $>$ \&}]{program }\end{DoxyParamCaption})}
+
+Creates an error token, storing the errnous content as token value \Hypertarget{class_token_a77b39efed40976f7891ce093a9bf1c39}\label{class_token_a77b39efed40976f7891ce093a9bf1c39} 
+\index{Token@{Token}!makeToken@{makeToken}}
+\index{makeToken@{makeToken}!Token@{Token}}
+\doxysubsubsection{\texorpdfstring{makeToken()}{makeToken()}}
+{\footnotesize\ttfamily void Token\+::make\+Token (\begin{DoxyParamCaption}\item[{int}]{begin,  }\item[{int}]{end,  }\item[{std\+::vector$<$ char $>$ \&}]{program,  }\item[{int}]{last\+Finite\+State }\end{DoxyParamCaption})}
+
+Creates a token \mbox{[}in\mbox{]} begin -\/ start position in the program buffer -\/ first character of the token \mbox{[}in\mbox{]} end -\/ end position in the program buffer -\/ end character of the token \mbox{[}in\mbox{]} program -\/ program buffer \mbox{[}in\mbox{]} last\+Finite\+State -\/ number of the last finite state, this is used to get the name of the state and store it as token type \Hypertarget{class_token_aa1fde7347e6503ab71e5962c58fed64b}\label{class_token_aa1fde7347e6503ab71e5962c58fed64b} 
+\index{Token@{Token}!printTokenInfo@{printTokenInfo}}
+\index{printTokenInfo@{printTokenInfo}!Token@{Token}}
+\doxysubsubsection{\texorpdfstring{printTokenInfo()}{printTokenInfo()}}
+{\footnotesize\ttfamily void Token\+::print\+Token\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Prints token type and value \Hypertarget{class_token_aeb7b648d087f0f955cb7343a8787c0d9}\label{class_token_aeb7b648d087f0f955cb7343a8787c0d9} 
+\index{Token@{Token}!printTokenValue@{printTokenValue}}
+\index{printTokenValue@{printTokenValue}!Token@{Token}}
+\doxysubsubsection{\texorpdfstring{printTokenValue()}{printTokenValue()}}
+{\footnotesize\ttfamily void Token\+::print\+Token\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Prints token value \Hypertarget{class_token_a72a5e117884ed1983ce28311ce601c64}\label{class_token_a72a5e117884ed1983ce28311ce601c64} 
+\index{Token@{Token}!setType@{setType}}
+\index{setType@{setType}!Token@{Token}}
+\doxysubsubsection{\texorpdfstring{setType()}{setType()}}
+{\footnotesize\ttfamily void Token\+::set\+Type (\begin{DoxyParamCaption}\item[{Token\+Type}]{t }\end{DoxyParamCaption})}
+
+Sets token type \Hypertarget{class_token_a937dceea640b105e48f522075138e163}\label{class_token_a937dceea640b105e48f522075138e163} 
+\index{Token@{Token}!setValue@{setValue}}
+\index{setValue@{setValue}!Token@{Token}}
+\doxysubsubsection{\texorpdfstring{setValue()}{setValue()}}
+{\footnotesize\ttfamily void Token\+::set\+Value (\begin{DoxyParamCaption}\item[{std\+::string}]{s }\end{DoxyParamCaption})}
+
+Sets token value 
+
+Dokumentacija ove klase je napravljena na osnovu sledećih datoteka\+:\begin{DoxyCompactItemize}
+\item 
+src/Token.\+h\item 
+src/Token.\+cpp\end{DoxyCompactItemize}

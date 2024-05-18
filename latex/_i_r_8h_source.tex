@@ -1,0 +1,62 @@
+\doxysection{IR.\+h}
+\hypertarget{_i_r_8h_source}{}\label{_i_r_8h_source}\index{src/IR.h@{src/IR.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_\_IR\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_\_IR\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Types.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_variable}{Variable}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{enum}\ VariableType}
+\DoxyCodeLine{00014\ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ MEM\_VAR,}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ REG\_VAR,}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ NO\_TYPE}
+\DoxyCodeLine{00018\ \ \ \ \ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_variable}{Variable}}()\ :\ m\_type(NO\_TYPE),\ m\_name(\textcolor{stringliteral}{"{}"{}}),\ m\_position(-\/1),\ m\_assignment(no\_assign)\ \{\}}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_variable}{Variable}}(std::string\ name,\ \textcolor{keywordtype}{int}\ pos)\ :\ m\_type(NO\_TYPE),\ m\_name(name),\ m\_position(pos),\ m\_assignment(no\_assign)\ \{\}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ VariableType\ m\_type;}
+\DoxyCodeLine{00025\ \ \ \ \ std::string\ m\_name;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_position;}
+\DoxyCodeLine{00027\ \ \ \ \ Regs\ m\_assignment;}
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{typedef}\ std::list<Variable*>\ Variables;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_instruction}{Instruction}}}
+\DoxyCodeLine{00041\ \{}
+\DoxyCodeLine{00042\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{class_instruction}{Instruction}}\ ()\ :\ m\_position(0),\ m\_type(I\_NO\_TYPE)\ \{\}}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_instruction}{Instruction}}\ (\textcolor{keywordtype}{int}\ pos,\ InstructionType\ type,\ Variables\&\ dst,\ Variables\&\ src)\ :}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ m\_position(pos),\ m\_type(type),\ m\_dst(dst),\ m\_src(src)\ \{\}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_position;}
+\DoxyCodeLine{00049\ \ \ \ \ InstructionType\ m\_type;}
+\DoxyCodeLine{00050\ \ \ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ Variables\ m\_dst;}
+\DoxyCodeLine{00052\ \ \ \ \ Variables\ m\_src;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ Variables\ m\_use;}
+\DoxyCodeLine{00055\ \ \ \ \ Variables\ m\_def;}
+\DoxyCodeLine{00056\ \ \ \ \ Variables\ m\_in;}
+\DoxyCodeLine{00057\ \ \ \ \ Variables\ m\_out;}
+\DoxyCodeLine{00058\ \ \ \ \ std::list<Instruction*>\ m\_succ;}
+\DoxyCodeLine{00059\ \ \ \ \ std::list<Instruction*>\ m\_pred;}
+\DoxyCodeLine{00060\ \};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{typedef}\ std::list<Instruction*>\ Instructions;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
