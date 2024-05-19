@@ -1,6 +1,2 @@
-﻿  FiniteStateMachine.cpp
-  LexicalAnalysis.cpp
-  Token.cpp
-  main.cpp
-  Generating Code...
+﻿  SyntaxAnalysis.cpp
   LexicalAnalysis.vcxproj -> C:\Users\Tamas\Documents\fakultet\semestar-4\OPPISA\projekat\src\Debug\LexicalAnalysis.exe

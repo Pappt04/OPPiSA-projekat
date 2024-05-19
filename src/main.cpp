@@ -1,10 +1,15 @@
 #include <iostream>
 #include <exception>
 
-#include "LexicalAnalysis.h"
+#include "SyntaxAnalysis.h"
 
 using namespace std;
 
+/**
+*string fin - file name to read lines from
+* 
+*Function prints all lines to terminal of the input file
+*/
 void printOutInputFileSourceCode(string fin)
 {
 	std::ifstream fileReader(fin);
@@ -43,9 +48,7 @@ int main(int arc, char* argv[])
 
 		lex.initialize();
 
-		retVal = lex.Do();
-
-		if (retVal)
+		if (lex.Do())
 		{
 			cout << "Lexical analysis finished successfully!" << endl;
 			lex.printTokens();
@@ -54,6 +57,13 @@ int main(int arc, char* argv[])
 		{
 			lex.printLexError();
 			throw runtime_error("\nException! Lexical analysis failed!\n");
+		}
+
+		SyntaxAnalysis syl(lex);
+		cout << "Syntax analysis started..." << endl;
+		if (syl.Do())
+		{
+			cout << "Syntax analysis finished successfully!" << endl;
 		}
 	}
 	catch (runtime_error e)

@@ -37,6 +37,11 @@ enum TokenType
 	T_B,			// b
 	T_NOP,			// nop
 
+	// added token types
+	T_MULT,			//mult
+	T_NOT,			//not
+	T_J,			//j
+
 	// operators
 	T_COMMA,		//,
 	T_L_PARENT,		//(
@@ -66,7 +71,11 @@ enum InstructionType
 	I_SW,
 	I_BLTZ,
 	I_B,
-	I_NOP
+	I_NOP,
+	//added instrctions
+	I_MULT,
+	I_NOT,
+	I_J
 };
 
 /**
