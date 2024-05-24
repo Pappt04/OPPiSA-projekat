@@ -8,7 +8,6 @@
 #include "Token.h"
 #include "FiniteStateMachine.h"
 
-
 typedef std::list<Token> TokenList;
 
 

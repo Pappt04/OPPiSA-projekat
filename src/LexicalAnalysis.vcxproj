@@ -86,6 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FiniteStateMachine.cpp" />
+    <ClCompile Include="IR.cpp" />
     <ClCompile Include="LexicalAnalysis.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SyntaxAnalysis.cpp" />

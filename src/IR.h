@@ -17,14 +17,26 @@ public:
 		NO_TYPE
 	};
 
-	Variable() : m_type(NO_TYPE), m_name(""), m_position(-1), m_assignment(no_assign) {}
-	Variable(std::string name, int pos) : m_type(NO_TYPE), m_name(name), m_position(pos), m_assignment(no_assign) {}
-
 private:
+	int m_value;
 	VariableType m_type;
 	std::string m_name;
 	int m_position;
 	Regs m_assignment;
+
+public:
+
+	Variable() : m_type(NO_TYPE), m_name(""), m_position(-1), m_assignment(no_assign), m_value(-69) {}
+	Variable(std::string name, int pos) : m_type(NO_TYPE), m_name(name), m_position(pos), m_assignment(no_assign), m_value(-69) {}
+	Variable(VariableType t, std::string name, int pos, Regs asgn, int v) : m_type(t), m_name(name), m_position(pos), m_assignment(asgn), m_value(v) {}
+	
+	std::string getName() const;
+	int getValue() const;
+	VariableType getType() const;
+	int getPosition() const;
+	Regs getAssignment() const;
+
+
 };
 
 

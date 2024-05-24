@@ -1,13 +1,15 @@
-#include <iostream>
 #include <exception>
+#include <iostream>
 
 #include "SyntaxAnalysis.h"
+
+#include <Windows.h>
 
 using namespace std;
 
 /**
 *string fin - file name to read lines from
-* 
+*
 *Function prints all lines to terminal of the input file
 */
 void printOutInputFileSourceCode(string fin)
@@ -32,12 +34,14 @@ int main(int arc, char* argv[])
 	{
 		std::string iFile = argv[1];
 		std::string oFile = argv[2];
-		
+
 		//std::string fileName = ".\\..\\examples\\testing.mavn";
 		std::string fileName = ".\\..\\examples\\" + iFile;
 		std::string outFileName = ".\\..\\examples\\" + oFile;
 
-		bool retVal = false;
+		//Set console color for error or successfull operation
+		HANDLE console_color;
+		console_color = GetStdHandle(STD_OUTPUT_HANDLE);
 
 		LexicalAnalysis lex;
 
@@ -50,7 +54,11 @@ int main(int arc, char* argv[])
 
 		if (lex.Do())
 		{
-			cout << "Lexical analysis finished successfully!" << endl;
+			cout << "Lexical analysis finished";
+			SetConsoleTextAttribute(console_color, 10);
+			cout << " successfully";
+			SetConsoleTextAttribute(console_color, 15);
+			cout << "!" << endl;
 			lex.printTokens();
 		}
 		else
@@ -60,10 +68,22 @@ int main(int arc, char* argv[])
 		}
 
 		SyntaxAnalysis syl(lex);
-		cout << "Syntax analysis started..." << endl;
+		cout << endl << "Syntax analysis started..." << endl << endl;
 		if (syl.Do())
 		{
-			cout << "Syntax analysis finished successfully!" << endl;
+			cout << "Syntax analysis finished";
+			SetConsoleTextAttribute(console_color, 10);
+			cout << " successfully";
+			SetConsoleTextAttribute(console_color, 15);
+			cout << "!" << endl;
+		}
+		else
+		{
+			cout << "Syntax analysis finished with";
+			SetConsoleTextAttribute(console_color, 12);
+			cout << " errors";
+			SetConsoleTextAttribute(console_color, 15);
+			cout << "!" << endl;
 		}
 	}
 	catch (runtime_error e)
