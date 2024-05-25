@@ -34,8 +34,7 @@ public:
 	*/
 	Variable() : m_type(NO_TYPE), m_name(""), m_position(-1), m_assignment(no_assign), m_value(-69) {}
 	Variable(std::string name, int pos) : m_type(NO_TYPE), m_name(name), m_position(pos), m_assignment(no_assign), m_value(-69) {}
-	Variable(VariableType t, std::string name, int pos, Regs asgn, int v) : m_type(t), m_name(name), m_position(pos), m_assignment(asgn), m_value(v) {}
-	
+	Variable(std::string name, int pos, VariableType v_type, int val = 0) : m_name(name), m_type(v_type), m_position(pos), m_assignment(no_assign), m_value(val) {}
 	/**
 	* Getters 
 	*/
@@ -89,8 +88,10 @@ private:
 
 public:
 	Instruction () : m_position(0), m_type(I_NO_TYPE) {}
-	Instruction (int pos, InstructionType type, Variables& dst, Variables& src) :
-		m_position(pos), m_type(type), m_dst(dst), m_src(src) {}
+	Instruction(int pos, InstructionType type, Variables& dst, Variables& src) :
+		m_position(pos), m_type(type), m_dst(dst), m_src(src) {
+		fillVariables_Fill_Def();
+	}
 
 	/**
 	* Getters

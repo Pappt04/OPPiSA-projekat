@@ -67,7 +67,11 @@ int main(int arc, char* argv[])
 			throw runtime_error("\nException! Lexical analysis failed!\n");
 		}
 
-		SyntaxAnalysis syl(lex);
+		//---------------------------------------------------------------------
+
+		Instructions instructions;
+
+		SyntaxAnalysis syl(lex,instructions);
 		cout << endl << "Syntax analysis started..." << endl << endl;
 		if (syl.Do())
 		{
@@ -91,6 +95,5 @@ int main(int arc, char* argv[])
 		cout << e.what() << endl;
 		return 1;
 	}
-
 	return 0;
 }

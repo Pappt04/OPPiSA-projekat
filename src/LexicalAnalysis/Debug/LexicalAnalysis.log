@@ -1,4 +1,5 @@
-﻿  SyntaxAnalysis.cpp
-  main.cpp
-  Generating Code...
+﻿  main.cpp
+C:\Users\Tamas\Documents\fakultet\semestar-4\OPPISA\projekat\src\SyntaxAnalysis.h(14,2): warning C4091: 'typedef ': ignored on left of 'Label' when no variable is declared
+  (compiling source file 'main.cpp')
+  
   LexicalAnalysis.vcxproj -> C:\Users\Tamas\Documents\fakultet\semestar-4\OPPISA\projekat\src\Debug\LexicalAnalysis.exe

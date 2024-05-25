@@ -5,6 +5,14 @@
 
 using namespace std;
 
+typedef struct Label
+{
+	string name;
+	int position;
+
+	Label(string n, int pos) :name(n), position(pos) {}
+};
+
 class SyntaxAnalysis
 {
 private:
@@ -15,12 +23,25 @@ private:
 	TokenList::iterator tokenIterator;
 
 	Token currentToken;
+
+	Instructions& instructions;
+
+	Variables mem_vars;
+	Variables reg_vars;
+	
+	list<string> func_list;
+	list<Label> label_list;
+
+	int registerCounter;
+
+	int instructionPosition;
+
 public:
 
 	/**
 	* Constructor
 	*/
-	SyntaxAnalysis(LexicalAnalysis& lex);
+	SyntaxAnalysis(LexicalAnalysis& lex, Instructions& instrs);
 
 	/**
 	* Method to start the syntax analysis
@@ -52,6 +73,15 @@ private:
 	*/
 	void eat(TokenType t);
 
+	/**
+	* Lets you peek the next token without consuming it
+	*/
+	Token peek();
+
+	/**
+	* Lets you look back at the previous token
+	*/
+	Token glanceBack();
 
 	/**
 	* Returns the next token from the Lexical Analysis list
@@ -77,5 +107,46 @@ private:
 	 * Nonterminal E
 	 */
 	void E();
+
+	/**
+	* Method to fill up a list where the memory elements are held
+	* Token t1 - memoryID
+	* Token t2 - value
+	*/
+	void fillMemoryVarList(Token& t1, Token& t2);
+
+	/**
+	* Method to fill up a list where the registers are held
+	* Token r - registerID
+	*/
+	void fillRegisterVarList(Token& r);
+
+	/**
+	* Method to fill up a list where all the function names are held
+	* string name - name of function
+	* int pos - position in program
+	*/
+	void fillFunctionList(string name, int pos);
+
+	/**
+	* Method to fill up a list where all the Label names are held
+	* string name - name of label
+	* int pos - position in program
+	*/
+	void fillLabelList(string name, int pos);
+
+	/**
+	* Get register position
+	* const string varName - name of register of position needed
+	*/
+	int getRegisterPosition(const string& varName);
+
+	/**
+	* Method that creates instructions based on list of tokens scanned in
+	* type - Type of instruction expected or should be created
+	* dst - destination registers in the program
+	* src - source of data to instruction
+	*/
+	void instructionFactory(InstructionType type, vector<Token>& dst, vector<Token>& src);
 };
 

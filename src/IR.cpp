@@ -80,7 +80,6 @@ ostream& operator<<(ostream& out, const Variable& v)
 
 InstructionType Instruction::getType() const { return m_type; }
 
-
 int Instruction::getPosition() const{ return m_position; }
 
 Variables Instruction::getDst() const {	return m_dst; }
