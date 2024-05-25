@@ -1,5 +1,7 @@
 #pragma once
+
 #include "LexicalAnalysis.h"
+#include "IR.h"
 
 using namespace std;
 

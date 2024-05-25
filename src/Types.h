@@ -38,8 +38,8 @@ enum TokenType
 	T_NOP,			// nop
 
 	// added token types
-	T_MULT,			//mult
-	T_NOT,			//not
+	T_OR,			//or
+	T_NOR,			//nor
 	T_J,			//j
 
 	// operators
@@ -73,8 +73,8 @@ enum InstructionType
 	I_B,
 	I_NOP,
 	//added instrctions
-	I_MULT,
-	I_NOT,
+	I_OR,
+	I_NOR,
 	I_J
 };
 
