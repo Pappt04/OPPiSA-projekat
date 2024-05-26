@@ -89,6 +89,10 @@ int main(int arc, char* argv[])
 			SetConsoleTextAttribute(console_color, 15);
 			cout << "!" << endl;
 		}
+
+		for (auto it = instructions.begin(); it != instructions.end(); it++)
+			cout << *(*it) << endl << endl << endl;
+
 	}
 	catch (runtime_error e)
 	{

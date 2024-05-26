@@ -112,8 +112,10 @@ public:
 	*/
 	void setSucc(Instruction* succ);
 	void setPred(Instruction* pred);
-
+	
 	void fillVariables_Fill_Def();
+
+	friend ostream& operator<<(ostream& out, const Instruction& ins);
 };
 
 

@@ -59,6 +59,8 @@ ostream& operator<<(ostream& out, const Variable& v)
 
 
 
+
+
 //--------------------------------------------------------------------------
 // Class Instruction starts here
 
@@ -140,3 +142,17 @@ void Instruction::fillVariables_Fill_Def()
 		break;
 	}
 }
+
+ostream& operator<<(ostream& out, const Instruction& ins)
+{
+	out << "InstructionPosition:	" << ins.getPosition() << endl;
+	out << "InstructionType:	" << ins.getType() << endl;
+	out << "Source variables:" << endl;
+	for (auto it = ins.m_src.begin(); it != ins.m_src.end(); it++)
+		out << *(*it) << endl;
+	out << endl << "Destination variables:" << endl;
+	for (auto it = ins.m_dst.begin(); it != ins.m_dst.end(); it++)
+		out << *(*it) << endl;
+	return out;
+}
+

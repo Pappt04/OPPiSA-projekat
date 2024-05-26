@@ -148,5 +148,25 @@ private:
 	* src - source of data to instruction
 	*/
 	void instructionFactory(InstructionType type, vector<Token>& dst, vector<Token>& src);
+
+	/**
+	* Returns the position of instruction in program
+	*/
+	int findInstructionPosition(Variables vars);
+
+	/**
+	* Returns the name of assigned register variable
+	*/
+	string returnAssignedRegister(string r);
+
+	/**
+	* Fills the list of successor variables
+	*/
+	void fillSuccessor();
+
+	/**
+	* Fills the list of predecessor variables
+	*/
+	void fillPredecessor();
 };
 

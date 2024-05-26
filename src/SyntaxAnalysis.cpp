@@ -4,6 +4,7 @@
 #include <iostream>
 
 #include "LexicalAnalysis.h"
+#include "IR.h"
 
 using namespace std;
 
@@ -359,9 +360,40 @@ void SyntaxAnalysis::instructionFactory(InstructionType Itype, vector<Token>& ds
 	Variables* dstVars = new Variables;
 	Variables* srcVars = new Variables;
 	Variable* var;
-	int i = 0;
-	auto itd = dst.begin(), its=src.begin();
-	switch (Itype)
+
+	if (Itype == I_NOP)
+	{
+		instr = new Instruction(instructionPosition, Itype, *dstVars, *srcVars);
+		instructions.push_back(instr);
+		instructionPosition++;
+		return;
+	}
+
+	for (auto it = dst.begin(); it != dst.end(); it++)
+	{
+		if((*it).getType() == T_R_ID )
+		{
+			var = new Variable((*it).getValue(), getRegisterPosition((*it).getValue()), Variable::REG_VAR);
+		}
+		else
+		{
+			var = new Variable((*it).getValue(), 0, Variable::NO_TYPE);
+		}
+		dstVars->push_back(var);
+	}
+	for (auto it = src.begin(); it != src.end(); it++)
+	{
+		if ((*it).getType() == T_R_ID)
+		{
+			var = new Variable((*it).getValue(), getRegisterPosition((*it).getValue()), Variable::REG_VAR);
+		}
+		else
+		{
+			var = new Variable((*it).getValue(), 0, Variable::NO_TYPE);
+		}
+		srcVars->push_back(var);
+	}
+	/*switch (Itype)
 	{
 	case I_ADD:
 		var = new Variable((*itd).getValue(), getRegisterPosition((*itd).getValue()), Variable::REG_VAR);
@@ -405,12 +437,47 @@ void SyntaxAnalysis::instructionFactory(InstructionType Itype, vector<Token>& ds
 		var = new Variable((*its).getValue(), getRegisterPosition((*its).getValue()), Variable::REG_VAR);
 		srcVars->push_back(var);
 		break;
+	case I_LI:
+		var = new Variable((*itd).getValue(), getRegisterPosition((*itd).getValue()), Variable::REG_VAR);
+		dstVars->push_back(var);
+		var = new Variable((*its).getValue(), getRegisterPosition(((*its).getValue())), Variable::REG_VAR);
+		srcVars->push_back(var);
+		break;
+	case I_SW:
+		var = new Variable((*its).getValue(),)
+		break;
 	default:
 		break;
 	}
+	*/
 	instr = new Instruction(instructionPosition, Itype, *dstVars, *srcVars);
 	instructions.push_back(instr);
 	instructionPosition++;
+}
+
+int SyntaxAnalysis::findInstructionPosition(Variables vars)
+{
+	auto it = vars.begin();
+	string s = (*it)->getName();
+	for (auto lit = label_list.begin(); lit != label_list.end(); lit++)
+	{
+		if (s == lit->name)
+			return (*it)->getPosition();
+	}
+	return -1;
+}
+
+string SyntaxAnalysis::returnAssignedRegister(string r)
+{
+	return string();
+}
+
+void SyntaxAnalysis::fillSuccessor()
+{
+}
+
+void SyntaxAnalysis::fillPredecessor()
+{
 }
 
 void SyntaxAnalysis::printMessageHeader()
