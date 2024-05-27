@@ -36,6 +36,12 @@
     <ClInclude Include="SyntaxAnalysis.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LivenessAnalysis.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Labels.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FiniteStateMachine.cpp">
@@ -54,6 +60,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="IR.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LivenessAnalysis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Labels.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

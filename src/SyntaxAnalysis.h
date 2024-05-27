@@ -2,10 +2,12 @@
 
 #include "LexicalAnalysis.h"
 #include "IR.h"
+#include "LivenessAnalysis.h"
 
+#include "Labels.h"
 using namespace std;
 
-typedef struct Label
+/*typedef struct Label
 {
 	string name;
 	int position;
@@ -13,6 +15,15 @@ typedef struct Label
 	Label(string n, int pos) :name(n), position(pos) {}
 };
 
+class Label
+{
+public:
+	string name;
+	int position;
+
+	Label(string n, int pos) :name(n), position(pos) {}
+};
+*/
 class SyntaxAnalysis
 {
 private:
@@ -30,7 +41,7 @@ private:
 	Variables reg_vars;
 	
 	list<string> func_list;
-	list<Label> label_list;
+	list<Labels> label_list;
 
 	int registerCounter;
 
@@ -149,24 +160,6 @@ private:
 	*/
 	void instructionFactory(InstructionType type, vector<Token>& dst, vector<Token>& src);
 
-	/**
-	* Returns the position of instruction in program
-	*/
-	int findInstructionPosition(Variables vars);
-
-	/**
-	* Returns the name of assigned register variable
-	*/
-	string returnAssignedRegister(string r);
-
-	/**
-	* Fills the list of successor variables
-	*/
-	void fillSuccessor();
-
-	/**
-	* Fills the list of predecessor variables
-	*/
-	void fillPredecessor();
+	
 };
 

@@ -5,6 +5,7 @@
 
 #include "LexicalAnalysis.h"
 #include "IR.h"
+#include "LivenessAnalysis.h"
 
 using namespace std;
 
@@ -20,6 +21,7 @@ bool SyntaxAnalysis::Do()
 {
 	currentToken = getNextToken();
 	Q();
+	LivenessAnalysis liv(instructions, label_list);
 	return !errorFound;
 }
 
@@ -336,12 +338,12 @@ void SyntaxAnalysis::fillRegisterVarList(Token& r)
 void SyntaxAnalysis::fillFunctionList(string name, int pos)
 {
 	func_list.push_back(name);
-	label_list.push_back(Label(name, pos));
+	label_list.push_back(Labels(name, pos));
 }
 
 void SyntaxAnalysis::fillLabelList(string name, int pos)
 {
-	label_list.push_back(Label(name, pos));
+	label_list.push_back(Labels(name, pos));
 }
 
 int SyntaxAnalysis::getRegisterPosition(const string& varName)
@@ -455,30 +457,7 @@ void SyntaxAnalysis::instructionFactory(InstructionType Itype, vector<Token>& ds
 	instructionPosition++;
 }
 
-int SyntaxAnalysis::findInstructionPosition(Variables vars)
-{
-	auto it = vars.begin();
-	string s = (*it)->getName();
-	for (auto lit = label_list.begin(); lit != label_list.end(); lit++)
-	{
-		if (s == lit->name)
-			return (*it)->getPosition();
-	}
-	return -1;
-}
 
-string SyntaxAnalysis::returnAssignedRegister(string r)
-{
-	return string();
-}
-
-void SyntaxAnalysis::fillSuccessor()
-{
-}
-
-void SyntaxAnalysis::fillPredecessor()
-{
-}
 
 void SyntaxAnalysis::printMessageHeader()
 {

@@ -1,7 +1,9 @@
 #include <exception>
 #include <iostream>
 
+#include "LexicalAnalysis.h"
 #include "SyntaxAnalysis.h"
+#include "LivenessAnalysis.h"
 
 #include <Windows.h>
 
@@ -90,8 +92,8 @@ int main(int arc, char* argv[])
 			cout << "!" << endl;
 		}
 
-		for (auto it = instructions.begin(); it != instructions.end(); it++)
-			cout << *(*it) << endl << endl << endl;
+		//for (auto it = instructions.begin(); it != instructions.end(); it++)
+		//	cout << *(*it) << endl << endl << endl;
 
 	}
 	catch (runtime_error e)
