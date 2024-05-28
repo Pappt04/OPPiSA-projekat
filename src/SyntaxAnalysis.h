@@ -63,6 +63,12 @@ public:
 	* Write some section starter characters
 	*/
 	void printMessageHeader();
+
+	/**
+	* Returns a list of register variables
+	*/
+	Variables& getRegVariables();
+
 private:
 	/**
 	* Token token - the token where the error occured
@@ -160,6 +166,5 @@ private:
 	*/
 	void instructionFactory(InstructionType type, vector<Token>& dst, vector<Token>& src);
 
-	
 };
 

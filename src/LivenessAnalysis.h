@@ -5,12 +5,11 @@
 #include "SyntaxAnalysis.h"
 #include <list>
 #include "Labels.h"
-using namespace std;
 
 class LivenessAnalysis
 {
 private:
-	Instructions instructions;
+	Instructions& instructions;
 	list<Labels> label_list;
 	Variables mem_vars;
 	Variables reg_vars;

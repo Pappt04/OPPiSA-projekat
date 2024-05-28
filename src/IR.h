@@ -110,6 +110,8 @@ public:
 	/**
 	* Setters
 	*/
+	void setIn(Variables vin);
+	void setOut(Variables vout);
 	void setSucc(Instruction* succ);
 	void setPred(Instruction* pred);
 	

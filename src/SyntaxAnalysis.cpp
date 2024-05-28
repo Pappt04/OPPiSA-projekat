@@ -33,9 +33,13 @@ bool SyntaxAnalysis::Do()
 		cout << " errors";
 		cout << "!" << endl;
 	}
-	cout << endl << "Liveness Analysis started..." << endl;
-	LivenessAnalysis liv(instructions, label_list, mem_vars, reg_vars);
 
+	cout << endl << "Liveness Analysis started..." << endl;
+	
+	LivenessAnalysis liv(instructions, label_list, mem_vars, reg_vars);
+	
+	liv.Do();
+	
 	cout << endl << "Liveness Analysis finished successfully!" << endl;
 
 	return !errorFound;
@@ -83,7 +87,7 @@ void SyntaxAnalysis::eat(TokenType tt)
 Token SyntaxAnalysis::peek()
 {
 	TokenList::iterator it = tokenIterator;
-	//it--;
+	it++;
 	return *it;
 }
 
@@ -473,7 +477,10 @@ void SyntaxAnalysis::instructionFactory(InstructionType Itype, vector<Token>& ds
 	instructionPosition++;
 }
 
-
+Variables& SyntaxAnalysis::getRegVariables()
+{
+	return reg_vars;
+}
 
 void SyntaxAnalysis::printMessageHeader()
 {

@@ -4,7 +4,7 @@
 #include "LexicalAnalysis.h"
 #include "SyntaxAnalysis.h"
 #include "LivenessAnalysis.h"
-
+#include "InterferenceGraph.h"
 #include <Windows.h>
 
 using namespace std;
@@ -93,8 +93,21 @@ int main(int arc, char* argv[])
 			cout << "!" << endl;
 		}*/
 
-		//for (auto it = instructions.begin(); it != instructions.end(); it++)
-		//	cout << *(*it) << endl << endl << endl;
+		for (auto it = instructions.begin(); it != instructions.end(); it++)
+			cout << *(*it) << endl << endl << endl;
+
+		InterferenceGraph infg(syl.getRegVariables());
+		infg.buildGraph(instructions);
+		infg.buildVarStack();
+		
+		cout << endl << "Build interference graph..." << endl;
+	
+		infg.printInterferenceMatrix();
+		
+		if (infg.resourceAllocation())
+			cout << endl << "Resource allocation successful!" << endl;
+		else
+			throw runtime_error("\nException! Resource allocation failed!!\n");
 
 	}
 	catch (runtime_error e)

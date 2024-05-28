@@ -94,11 +94,15 @@ Variables Instruction::getDef() const {	return m_def; }
 
 Variables Instruction::getIn() const { return m_in; }
 
-Variables Instruction::getOut() const {	return Variables(); }
+Variables Instruction::getOut() const {	return m_out; }
 
 list<Instruction*> Instruction::getSucc() const { return m_succ; }
 
 list<Instruction*> Instruction::getPred() const { return m_pred; }
+
+void Instruction::setIn(Variables vin) { m_in = vin; }
+
+void Instruction::setOut(Variables vout) { m_out = vout; }
 
 void Instruction::setSucc(Instruction* succ) { m_succ.push_back(succ); }
 
@@ -145,9 +149,10 @@ void Instruction::fillVariables_Fill_Def()
 
 ostream& operator<<(ostream& out, const Instruction& ins)
 {
+	out << "#############################################" << endl;
 	out << "InstructionPosition:	" << ins.getPosition() << endl;
 	out << "InstructionType:	" << ins.getType() << endl;
-	out << "Source variables:" << endl;
+	out << endl << "Source variables:" << endl;
 	for (auto it = ins.m_src.begin(); it != ins.m_src.end(); it++)
 		out << *(*it) << endl;
 	out << endl << "Destination variables:" << endl;

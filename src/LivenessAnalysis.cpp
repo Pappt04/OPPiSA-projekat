@@ -1,5 +1,7 @@
 #include "LivenessAnalysis.h"
 
+using namespace std;
+
 LivenessAnalysis::LivenessAnalysis(Instructions& instrs, list<Labels>& labs, Variables& mmvrs, Variables& rgvrs) : instructions(instrs), label_list(labs), mem_vars(mmvrs), reg_vars(rgvrs) { fillSuccessor(); fillPredecessor(); }
 
 int LivenessAnalysis::findInstructionPosition(Variables vars)
@@ -77,15 +79,17 @@ void LivenessAnalysis::Do()
 	{
 		for (auto rit = instructions.rbegin(); rit != instructions.rend(); rit++)
 		{
-			Variables& oldIN = (*rit)->getOut();
-			Variables& oldOUT = (*rit)->getIn();
+			Variables& oldOUT = (*rit)->getOut();
+			Variables& oldIN = (*rit)->getIn();
 			
 			Variables newIN,newOUT;
 
 			/* out[n] <- U sUsucc[n]in[s]*/
-			for (auto sit = (*rit)->getSucc().begin(); sit != (*rit)->getSucc().end(); sit++)
+			Instructions temp = (*rit)->getSucc();
+			for (auto sit = temp.begin(); sit != temp.end(); sit++)
 			{
-				newOUT.insert(oldOUT.end(), (*sit)->getIn().begin(), (*sit)->getIn().end());
+				Variables& succIN = (*sit)->getIn();
+				newOUT.insert(newOUT.end(), succIN.begin(), succIN.end());
 			}
 
 			newOUT.sort();
@@ -112,8 +116,10 @@ void LivenessAnalysis::Do()
 			if ((*rit)->getIn() == newIN && (*rit)->getOut() == newOUT)
 				return;
 
-			oldIN = newIN;
-			oldOUT = newOUT;
+			(*rit)->setIn(newIN);
+			(*rit)->setOut(newOUT);
+			//oldIN = newIN;
+			//oldOUT = newOUT;
 		}
 	}
 }

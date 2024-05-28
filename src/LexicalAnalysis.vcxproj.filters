@@ -42,6 +42,9 @@
     <ClInclude Include="Labels.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="InterferenceGraph.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FiniteStateMachine.cpp">
@@ -66,6 +69,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Labels.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InterferenceGraph.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
