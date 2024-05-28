@@ -21,7 +21,23 @@ bool SyntaxAnalysis::Do()
 {
 	currentToken = getNextToken();
 	Q();
-	LivenessAnalysis liv(instructions, label_list);
+	if (!errorFound)
+	{
+		cout << "Syntax analysis finished";
+		cout << " successfully";
+		cout << "!" << endl;
+	}
+	else
+	{
+		cout << "Syntax analysis finished with";
+		cout << " errors";
+		cout << "!" << endl;
+	}
+	cout << endl << "Liveness Analysis started..." << endl;
+	LivenessAnalysis liv(instructions, label_list, mem_vars, reg_vars);
+
+	cout << endl << "Liveness Analysis finished successfully!" << endl;
+
 	return !errorFound;
 }
 

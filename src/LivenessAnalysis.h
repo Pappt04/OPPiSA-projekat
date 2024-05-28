@@ -12,10 +12,18 @@ class LivenessAnalysis
 private:
 	Instructions instructions;
 	list<Labels> label_list;
+	Variables mem_vars;
+	Variables reg_vars;
 public:
 
-	LivenessAnalysis(Instructions& instrs, list<Labels> labs);
+	LivenessAnalysis(Instructions& instrs, list<Labels>& labs, Variables& mmvrs, Variables& rgvrs);
 
+	/**
+	* Does Liveness analysis
+	*/
+	void Do();
+	
+private:
 	/**
 	* Returns the position of instruction in program
 	*/
@@ -35,5 +43,9 @@ public:
 	* Fills the list of predecessor variables
 	*/
 	void fillPredecessor();
-};
 
+	/**
+	* Checks if Variable exists in variable list
+	*/
+	bool variableExists(Variable* var, Variables variables);
+};

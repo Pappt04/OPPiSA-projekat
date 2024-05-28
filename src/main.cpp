@@ -75,7 +75,8 @@ int main(int arc, char* argv[])
 
 		SyntaxAnalysis syl(lex,instructions);
 		cout << endl << "Syntax analysis started..." << endl << endl;
-		if (syl.Do())
+		syl.Do();
+		/*if (syl.Do())
 		{
 			cout << "Syntax analysis finished";
 			SetConsoleTextAttribute(console_color, 10);
@@ -90,7 +91,7 @@ int main(int arc, char* argv[])
 			cout << " errors";
 			SetConsoleTextAttribute(console_color, 15);
 			cout << "!" << endl;
-		}
+		}*/
 
 		//for (auto it = instructions.begin(); it != instructions.end(); it++)
 		//	cout << *(*it) << endl << endl << endl;
