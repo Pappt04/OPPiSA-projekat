@@ -103,6 +103,10 @@ void InterferenceGraph::printInterferenceMatrix()
 
 void InterferenceGraph::resizeInterferenceMatrix(int size)
 {
+	inf_mat.resize(size);
+
+	for (unsigned i = 0; i < inf_mat.size(); ++i)
+		inf_mat[i].resize(size);
 }
 
 void InterferenceGraph::applyRegtoVariable(int varPos, Regs reg)

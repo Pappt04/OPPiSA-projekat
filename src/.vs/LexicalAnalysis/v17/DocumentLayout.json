@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\InterferenceGraph.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|solutionrelative:InterferenceGraph.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -11,8 +15,24 @@
       "RelativeMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|solutionrelative:LivenessAnalysis.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\InterferenceGraph.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|solutionrelative:InterferenceGraph.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\LexicalAnalysis.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|solutionrelative:LexicalAnalysis.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\FiniteStateMachine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|solutionrelative:FiniteStateMachine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\IR.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|solutionrelative:IR.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\Constants.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|solutionrelative:Constants.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\IR.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -25,14 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\LivenessAnalysis.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|solutionrelative:LivenessAnalysis.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\InterferenceGraph.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|solutionrelative:InterferenceGraph.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\SyntaxAnalysis.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -51,10 +63,6 @@
       "RelativeMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|solutionrelative:LexicalAnalysis.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\LexicalAnalysis.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|solutionrelative:LexicalAnalysis.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\FiniteStateMachine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|solutionrelative:FiniteStateMachine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -63,20 +71,12 @@
       "RelativeMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|solutionrelative:Token.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\FiniteStateMachine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|solutionrelative:FiniteStateMachine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\Types.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|solutionrelative:Types.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\Token.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|solutionrelative:Token.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\Constants.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4301F324-7146-4E1C-939F-6268461138AB}|LexicalAnalysis.vcxproj|solutionrelative:Constants.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -86,17 +86,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAuwEkAAAATAAAA",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAAwGwAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-05-12T21:03:28.59Z",
               "IsPinned": true,
@@ -104,7 +104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "FiniteStateMachine.h",
               "DocumentMoniker": "C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\FiniteStateMachine.h",
               "RelativeDocumentMoniker": "FiniteStateMachine.h",
@@ -113,12 +113,11 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACsAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-05-16T17:38:53.732Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 5,
               "Title": "FiniteStateMachine.cpp",
               "DocumentMoniker": "C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\FiniteStateMachine.cpp",
               "RelativeDocumentMoniker": "FiniteStateMachine.cpp",
@@ -127,11 +126,12 @@
               "ViewState": "AQIAAIAAAAAAAAAAAAAAADAAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-05-16T17:38:19.455Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 4,
               "Title": "LexicalAnalysis.h",
               "DocumentMoniker": "C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\LexicalAnalysis.h",
               "RelativeDocumentMoniker": "LexicalAnalysis.h",
@@ -145,7 +145,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "LexicalAnalysis.cpp",
               "DocumentMoniker": "C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\LexicalAnalysis.cpp",
               "RelativeDocumentMoniker": "LexicalAnalysis.cpp",
@@ -154,12 +154,11 @@
               "ViewState": "AQIAAAUAAAAAAAAAAAA3wJ4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-05-16T17:38:15.551Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "SyntaxAnalysis.h",
               "DocumentMoniker": "C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\SyntaxAnalysis.h",
               "RelativeDocumentMoniker": "SyntaxAnalysis.h",
@@ -168,12 +167,11 @@
               "ViewState": "AQIAABwAAAAAAAAAAAAQwCgAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-05-19T20:47:41.271Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "SyntaxAnalysis.cpp",
               "DocumentMoniker": "C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\SyntaxAnalysis.cpp",
               "RelativeDocumentMoniker": "SyntaxAnalysis.cpp",
@@ -182,12 +180,11 @@
               "ViewState": "AQIAANwBAAAAAAAAAAAAAHYBAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-05-19T21:00:56.394Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "IR.h",
               "DocumentMoniker": "C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\IR.h",
               "RelativeDocumentMoniker": "IR.h",
@@ -196,18 +193,17 @@
               "ViewState": "AQIAAGQAAAAAAAAAAAAUwHEAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-05-16T17:38:29.549Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "IR.cpp",
               "DocumentMoniker": "C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\IR.cpp",
               "RelativeDocumentMoniker": "IR.cpp",
               "ToolTip": "C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\IR.cpp",
               "RelativeToolTip": "IR.cpp",
-              "ViewState": "AQIAAE8AAAAAAAAAAAAYwF4AAAAAAAAA",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAAAGAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-05-24T21:13:19.41Z",
               "IsPinned": true,
@@ -215,7 +211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "LivenessAnalysis.h",
               "DocumentMoniker": "C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\LivenessAnalysis.h",
               "RelativeDocumentMoniker": "LivenessAnalysis.h",
@@ -224,18 +220,17 @@
               "ViewState": "AQIAAAcAAAAAAAAAAAAkwAsAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-05-26T21:54:46.587Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "LivenessAnalysis.cpp",
               "DocumentMoniker": "C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\LivenessAnalysis.cpp",
               "RelativeDocumentMoniker": "LivenessAnalysis.cpp",
               "ToolTip": "C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\LivenessAnalysis.cpp",
               "RelativeToolTip": "LivenessAnalysis.cpp",
-              "ViewState": "AQIAAGsAAAAAAAAAAAAYwFYAAAAiAAAA",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAAAFoAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-05-26T21:54:57.109Z",
               "IsPinned": true,
@@ -243,13 +238,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "InterferenceGraph.h",
               "DocumentMoniker": "C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\InterferenceGraph.h",
               "RelativeDocumentMoniker": "InterferenceGraph.h",
               "ToolTip": "C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\InterferenceGraph.h",
               "RelativeToolTip": "InterferenceGraph.h",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwAsAAAAYAAAA",
+              "ViewState": "AQIAACAAAAAAAAAAAAAAwC8AAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-05-28T10:12:03.237Z",
               "IsPinned": true,
@@ -257,13 +252,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "InterferenceGraph.cpp",
               "DocumentMoniker": "C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\InterferenceGraph.cpp",
               "RelativeDocumentMoniker": "InterferenceGraph.cpp",
               "ToolTip": "C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\InterferenceGraph.cpp",
               "RelativeToolTip": "InterferenceGraph.cpp",
-              "ViewState": "AQIAAAcAAAAAAAAAAAApwBMAAAAEAAAA",
+              "ViewState": "AQIAADAAAAAAAAAAAAAmwGwAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-05-28T10:13:19.691Z",
               "IsPinned": true,
@@ -283,7 +278,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "Labels.h",
               "DocumentMoniker": "C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\Labels.h",
               "RelativeDocumentMoniker": "Labels.h",
@@ -291,12 +286,11 @@
               "RelativeToolTip": "Labels.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-27T11:31:16.728Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-27T11:31:16.728Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "Labels.cpp",
               "DocumentMoniker": "C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\Labels.cpp",
               "RelativeDocumentMoniker": "Labels.cpp",
@@ -304,12 +298,11 @@
               "RelativeToolTip": "Labels.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwAIAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-27T11:31:40.855Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-27T11:31:40.855Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "Token.h",
               "DocumentMoniker": "C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\Token.h",
               "RelativeDocumentMoniker": "Token.h",
@@ -321,7 +314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "Token.cpp",
               "DocumentMoniker": "C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\Token.cpp",
               "RelativeDocumentMoniker": "Token.cpp",
@@ -333,19 +326,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 7,
               "Title": "Constants.h",
               "DocumentMoniker": "C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\Constants.h",
               "RelativeDocumentMoniker": "Constants.h",
               "ToolTip": "C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\Constants.h",
               "RelativeToolTip": "Constants.h",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAAAoAAAADAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAAoAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-16T17:38:40.645Z"
+              "WhenOpened": "2024-05-16T17:38:40.645Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Types.h",
               "DocumentMoniker": "C:\\Users\\Tamas\\Documents\\fakultet\\semestar-4\\OPPISA\\projekat\\src\\Types.h",
               "RelativeDocumentMoniker": "Types.h",
