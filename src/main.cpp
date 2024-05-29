@@ -108,7 +108,8 @@ int main(int arc, char* argv[])
 			cout << endl << "Resource allocation successful!" << endl;
 		else
 			throw runtime_error("\nException! Resource allocation failed!!\n");
-
+		
+		syl.createMipsFile(oFile);
 	}
 	catch (runtime_error e)
 	{

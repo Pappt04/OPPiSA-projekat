@@ -477,9 +477,96 @@ void SyntaxAnalysis::instructionFactory(InstructionType Itype, vector<Token>& ds
 	instructionPosition++;
 }
 
+string SyntaxAnalysis::returnAssignedRegister(string r)
+{
+	for (auto it = reg_vars.begin(); it != reg_vars.end(); it++)
+	{
+		if (r == (*it)->getName())
+		{
+			return "t" + std::to_string((*it)->getAssignment() - 1);
+		}
+	}
+	return "-ERROR-";
+}
+
+string SyntaxAnalysis::checkLabels(int pos, list<Labels> labList)
+{
+	string ret = "";
+	for (list<Labels>::iterator it_label = label_list.begin(); it_label != label_list.end(); it_label++)
+	{
+		if (pos == (*it_label).position)
+		{
+			ret += (*it_label).name + ":\n";
+		}
+	}
+	return ret;
+}
+
 Variables& SyntaxAnalysis::getRegVariables()
 {
 	return reg_vars;
+}
+
+void SyntaxAnalysis::createMipsFile(const string path)
+{
+	ofstream fout(path);
+	if (fout.is_open())
+	{
+		cout << "Opened file to write MIPS instructions in"<<endl;
+		
+		fout << ".globl ";
+		for (string& fit : func_list)
+			fout << fit << endl;
+
+		fout << "\n.data\n";
+
+		for (auto vit = mem_vars.begin(); vit != mem_vars.end(); vit++)
+			fout << (*vit)->getName() << ":\t .word " << (*vit)->getValue() << endl;
+
+		fout << "\n.text\n";
+
+		string instrs[] = {"add","addi","sub","la","li","lw","sw","bltz","b","NOP"};
+		for (auto it = instructions.begin(); it != instructions.end(); it++)
+		{
+			fout << checkLabels((*it)->getPosition(), label_list);
+			
+			fout << "\t" << instrs[(*it)->getType() - I_ADD] << "\t ";
+			switch ((*it)->getType())
+			{
+			case I_ADD:
+			case I_SUB:
+				fout << "$" << returnAssignedRegister((*it)->getDst().front()->getName()) << ", $" << returnAssignedRegister((*it)->getSrc().front()->getName()) << ", $" << returnAssignedRegister((*it)->getDst().front()->getName()) << endl;
+				break;
+			case I_ADDI:
+				fout << "$" << returnAssignedRegister((*it)->getDst().front()->getName()) << ", $" << returnAssignedRegister((*it)->getSrc().front()->getName()) << ", $" << returnAssignedRegister((*it)->getSrc().front()->getName()) << endl;
+				break;
+			case I_LW:
+				fout << "$" << returnAssignedRegister((*it)->getDst().front()->getName()) << ", " << returnAssignedRegister((*it)->getSrc().front()->getName()) << ", ($" << returnAssignedRegister((*it)->getDst().front()->getName()) <<")"<< endl;
+				break;
+			case I_LA:
+			case I_LI:
+				fout << "$" << returnAssignedRegister((*it)->getDst().front()->getName()) << ", " << returnAssignedRegister((*it)->getSrc().front()->getName()) << endl;
+				break;
+			case I_SW:
+				fout << "$" << returnAssignedRegister((*it)->getSrc().front()->getName()) << ", $" << returnAssignedRegister((*it)->getDst().front()->getName()) << ", $" << returnAssignedRegister((*it)->getDst().front()->getName()) << endl;
+				break;
+			case I_B:
+				fout << "$" << (*it)->getDst().front()->getName() << endl;
+				break;
+			case I_BLTZ:
+				fout << "$" << returnAssignedRegister((*it)->getSrc().front()->getName()) << ", " << (*it)->getDst().front()->getName() << endl;
+				break;
+			default:
+				break;
+			}
+		}
+
+	}
+	else
+	{
+		throw exception("File could not be opened");
+	}
+	fout.close();
 }
 
 void SyntaxAnalysis::printMessageHeader()

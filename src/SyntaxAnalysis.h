@@ -46,7 +46,6 @@ private:
 	int registerCounter;
 
 	int instructionPosition;
-
 public:
 
 	/**
@@ -69,6 +68,11 @@ public:
 	*/
 	Variables& getRegVariables();
 
+	/**
+	* Function that creates MIPS file
+	* string path - output path for the file
+	*/
+	void createMipsFile(const string path);
 private:
 	/**
 	* Token token - the token where the error occured
@@ -166,5 +170,15 @@ private:
 	*/
 	void instructionFactory(InstructionType type, vector<Token>& dst, vector<Token>& src);
 
+	/**
+	* Returns the name of assigned register variable
+	*/
+	string returnAssignedRegister(string r);
+
+	/**
+	* Checks if label belongs in the file
+	* 
+	*/
+	string checkLabels(int pos, list<Labels> labList);
 };
 
