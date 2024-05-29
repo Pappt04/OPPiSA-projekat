@@ -336,6 +336,39 @@ void SyntaxAnalysis::E()
 		instructionFactory(I_NOP, dst, src);
 		break;
 	//TODO NEEDED THE 3 EXTRA INSTRUCTIONS HERE
+	case T_OR:
+		eat(T_OR);
+		dst.push_back(currentToken);
+		eat(T_R_ID);
+		eat(T_COMMA);
+		src.push_back(currentToken);
+		eat(T_R_ID);
+		eat(T_COMMA);
+		src.push_back(currentToken);
+		eat(T_R_ID);
+		instructionFactory(I_OR, dst, src);
+		break;
+	case T_NOR:
+		eat(T_NOR);
+		dst.push_back(currentToken);
+		eat(T_R_ID);
+		eat(T_COMMA);
+		src.push_back(currentToken);
+		eat(T_R_ID);
+		eat(T_COMMA);
+		src.push_back(currentToken);
+		eat(T_R_ID);
+		instructionFactory(I_NOR, dst, src);
+		break;
+	case T_NOT:
+		eat(T_NOT);
+		dst.push_back(currentToken);
+		eat(T_R_ID);
+		eat(T_COMMA);
+		src.push_back(currentToken);
+		eat(T_R_ID);
+		instructionFactory(I_NOT, dst, src);
+		break;
 	default:
 		errorFound = true;
 		break;
@@ -556,6 +589,12 @@ void SyntaxAnalysis::createMipsFile(const string path)
 			case I_BLTZ:
 				fout << "$" << returnAssignedRegister((*it)->getSrc().front()->getName()) << ", " << (*it)->getDst().front()->getName() << endl;
 				break;
+			case I_OR:
+			case I_NOR:
+				fout << "$" << returnAssignedRegister((*it)->getDst().front()->getName()) << ", " << (*it)->getSrc().front()->getName() << ", $" << returnAssignedRegister((*it)->getDst().back()->getName()) << endl;
+				break;
+			case I_NOT:
+				//TODO
 			default:
 				break;
 			}

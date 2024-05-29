@@ -103,7 +103,7 @@ string Token::tokenTypeToString(TokenType t)
 		case T_ERROR:			return "[T_ERROR]";
 		case T_OR:				return "[T_OR]";
 		case T_NOR:				return "[T_NOR]";
-		case T_J:				return "[T_J]";
+		case T_NOT:				return "[T_NOT]";
 		default:				return "";
 	}
 }

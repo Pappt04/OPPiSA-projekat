@@ -40,7 +40,7 @@ enum TokenType
 	// added token types
 	T_OR,			//or
 	T_NOR,			//nor
-	T_J,			//j
+	T_NOT,			//not
 
 	// operators
 	T_COMMA,		//,
@@ -75,7 +75,7 @@ enum InstructionType
 	//added instrctions
 	I_OR,
 	I_NOR,
-	I_J
+	I_NOT
 };
 
 /**

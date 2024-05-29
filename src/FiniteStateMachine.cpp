@@ -55,7 +55,8 @@ const TokenType FiniteStateMachine::stateToTokenTable[NUM_STATES] = {
 	/*state 46*/	T_OR,
 	/*state 47*/	T_NOR,
 	/*state 48*/	T_ID,
-	/*state 49*/	T_ID
+	/*state 49*/	T_ID,
+	/*state 50*/	T_NOT
 };
 
 const char FiniteStateMachine::supportedCharacters[NUM_OF_CHARACTERS] =
@@ -142,7 +143,7 @@ const int FiniteStateMachine::stateMatrix[NUM_STATES][NUM_OF_CHARACTERS] =
 	/* state 46 */	{20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},		// T_OR
 
 	/* state 47 */	{20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},		// T_NOR
-
+	/* state 48 */	{20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},		// T_NOT
 };
 
 
