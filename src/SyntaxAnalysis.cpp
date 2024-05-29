@@ -535,20 +535,20 @@ void SyntaxAnalysis::createMipsFile(const string path)
 			{
 			case I_ADD:
 			case I_SUB:
-				fout << "$" << returnAssignedRegister((*it)->getDst().front()->getName()) << ", $" << returnAssignedRegister((*it)->getSrc().front()->getName()) << ", $" << returnAssignedRegister((*it)->getDst().front()->getName()) << endl;
+				fout << "$" << returnAssignedRegister((*it)->getDst().front()->getName()) << ", $" << returnAssignedRegister((*it)->getSrc().front()->getName()) << ", $" << returnAssignedRegister((*it)->getDst().back()->getName()) << endl;
 				break;
 			case I_ADDI:
-				fout << "$" << returnAssignedRegister((*it)->getDst().front()->getName()) << ", $" << returnAssignedRegister((*it)->getSrc().front()->getName()) << ", $" << returnAssignedRegister((*it)->getSrc().front()->getName()) << endl;
+				fout << "$" << returnAssignedRegister((*it)->getDst().front()->getName()) << ", $" << returnAssignedRegister((*it)->getSrc().front()->getName()) << ", $" << returnAssignedRegister((*it)->getSrc().back()->getName()) << endl;
 				break;
 			case I_LW:
-				fout << "$" << returnAssignedRegister((*it)->getDst().front()->getName()) << ", " << returnAssignedRegister((*it)->getSrc().front()->getName()) << ", ($" << returnAssignedRegister((*it)->getDst().front()->getName()) <<")"<< endl;
+				fout << "$" << returnAssignedRegister((*it)->getDst().front()->getName()) << ", " << (*it)->getSrc().front()->getName() << "($" << returnAssignedRegister((*it)->getSrc().back()->getName()) <<")"<< endl;
 				break;
 			case I_LA:
 			case I_LI:
-				fout << "$" << returnAssignedRegister((*it)->getDst().front()->getName()) << ", " << returnAssignedRegister((*it)->getSrc().front()->getName()) << endl;
+				fout << "$" << returnAssignedRegister((*it)->getDst().front()->getName()) << ", " << (*it)->getSrc().front()->getName() << endl;
 				break;
 			case I_SW:
-				fout << "$" << returnAssignedRegister((*it)->getSrc().front()->getName()) << ", $" << returnAssignedRegister((*it)->getDst().front()->getName()) << ", $" << returnAssignedRegister((*it)->getDst().front()->getName()) << endl;
+				fout << "$" << returnAssignedRegister((*it)->getSrc().front()->getName()) << ", $" << (*it)->getDst().front()->getName() << ", $" << returnAssignedRegister((*it)->getDst().back()->getName()) << endl;
 				break;
 			case I_B:
 				fout << "$" << (*it)->getDst().front()->getName() << endl;

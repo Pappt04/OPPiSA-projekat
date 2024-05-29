@@ -75,8 +75,10 @@ bool LivenessAnalysis::variableExists(Variable* var, Variables variables)
 
 void LivenessAnalysis::Do()
 {
-	while (true)
+	bool condition = true;
+	while (condition)
 	{
+		condition = false;
 		for (auto rit = instructions.rbegin(); rit != instructions.rend(); rit++)
 		{
 			Variables& oldOUT = (*rit)->getOut();
@@ -113,13 +115,14 @@ void LivenessAnalysis::Do()
 			newIN.sort();
 			newIN.unique();
 			
-			if ((*rit)->getIn() == newIN && (*rit)->getOut() == newOUT)
-				return;
+			//if ((*rit)->getIn() == newIN && (*rit)->getOut() == newOUT)
+			//	condition = true;
+
+			if (newIN != oldIN || newOUT != oldOUT)
+				condition = true;
 
 			(*rit)->setIn(newIN);
 			(*rit)->setOut(newOUT);
-			//oldIN = newIN;
-			//oldOUT = newOUT;
 		}
 	}
 }

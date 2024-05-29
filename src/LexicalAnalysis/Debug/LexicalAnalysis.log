@@ -1,14 +1,2 @@
-﻿  FiniteStateMachine.cpp
-  InterferenceGraph.cpp
-C:\Users\Tamas\Documents\fakultet\semestar-4\OPPISA\projekat\src\InterferenceGraph.cpp(10,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Tamas\Documents\fakultet\semestar-4\OPPISA\projekat\src\InterferenceGraph.cpp(89,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Tamas\Documents\fakultet\semestar-4\OPPISA\projekat\src\InterferenceGraph.cpp(93,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Tamas\Documents\fakultet\semestar-4\OPPISA\projekat\src\InterferenceGraph.cpp(97,21): warning C4018: '<': signed/unsigned mismatch
-  IR.cpp
-  LexicalAnalysis.cpp
-  LivenessAnalysis.cpp
-  main.cpp
-  SyntaxAnalysis.cpp
-  Token.cpp
-  Generating Code...
+﻿  LivenessAnalysis.cpp
   LexicalAnalysis.vcxproj -> C:\Users\Tamas\Documents\fakultet\semestar-4\OPPISA\projekat\src\Debug\LexicalAnalysis.exe
