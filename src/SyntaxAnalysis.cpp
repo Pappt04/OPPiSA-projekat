@@ -1,8 +1,7 @@
+/*Author: Papp Tamas Index: RA004/2022 Datum: 2024.06.05*/
 #include "SyntaxAnalysis.h"
-
 #include <iomanip>
 #include <iostream>
-
 #include "LexicalAnalysis.h"
 #include "IR.h"
 #include "LivenessAnalysis.h"
@@ -360,14 +359,11 @@ void SyntaxAnalysis::E()
 		eat(T_R_ID);
 		instructionFactory(I_NOR, dst, src);
 		break;
-	case T_NOT:
-		eat(T_NOT);
+	case T_JR:
+		eat(T_JR);
 		dst.push_back(currentToken);
 		eat(T_R_ID);
-		eat(T_COMMA);
-		src.push_back(currentToken);
-		eat(T_R_ID);
-		instructionFactory(I_NOT, dst, src);
+		instructionFactory(I_JR, dst, src);
 		break;
 	default:
 		errorFound = true;
@@ -448,63 +444,6 @@ void SyntaxAnalysis::instructionFactory(InstructionType Itype, vector<Token>& ds
 		}
 		srcVars->push_back(var);
 	}
-	/*switch (Itype)
-	{
-	case I_ADD:
-		var = new Variable((*itd).getValue(), getRegisterPosition((*itd).getValue()), Variable::REG_VAR);
-		dstVars->push_back(var);
-		var = new Variable((*its).getValue(), getRegisterPosition((*its).getValue()), Variable::REG_VAR);
-		srcVars->push_back(var);
-		its++;
-		var = new Variable((*its).getValue(), getRegisterPosition((*its).getValue()), Variable::REG_VAR);
-		srcVars->push_back(var);
-		break;
-	case I_ADDI:
-		var = new Variable((*itd).getValue(), getRegisterPosition((*itd).getValue()), Variable::REG_VAR);
-		dstVars->push_back(var);
-		var = new Variable((*its).getValue(), getRegisterPosition((*its).getValue()), Variable::REG_VAR);
-		srcVars->push_back(var);
-		its++;
-		var = new Variable((*its).getValue(),0, Variable::NO_TYPE);
-		srcVars->push_back(var);
-		break;
-	case I_SUB:
-		var = new Variable((*itd).getValue(), getRegisterPosition((*itd).getValue()), Variable::REG_VAR);
-		dstVars->push_back(var);
-		var = new Variable((*its).getValue(), getRegisterPosition((*its).getValue()), Variable::REG_VAR);
-		srcVars->push_back(var);
-		its++;
-		var = new Variable((*its).getValue(), getRegisterPosition((*its).getValue()), Variable::REG_VAR);
-		srcVars->push_back(var);
-		break;
-	case I_LA:
-		var = new Variable((*itd).getValue(), getRegisterPosition((*itd).getValue()), Variable::REG_VAR);
-		dstVars->push_back(var);
-		var = new Variable((*its).getValue(), 0, Variable::NO_TYPE);
-		srcVars->push_back(var);
-		break;
-	case I_LW:
-		var = new Variable((*itd).getValue(), getRegisterPosition((*itd).getValue()), Variable::REG_VAR);
-		dstVars->push_back(var);
-		var = new Variable((*its).getValue(),0, Variable::NO_TYPE);
-		srcVars->push_back(var);
-		its++;
-		var = new Variable((*its).getValue(), getRegisterPosition((*its).getValue()), Variable::REG_VAR);
-		srcVars->push_back(var);
-		break;
-	case I_LI:
-		var = new Variable((*itd).getValue(), getRegisterPosition((*itd).getValue()), Variable::REG_VAR);
-		dstVars->push_back(var);
-		var = new Variable((*its).getValue(), getRegisterPosition(((*its).getValue())), Variable::REG_VAR);
-		srcVars->push_back(var);
-		break;
-	case I_SW:
-		var = new Variable((*its).getValue(),)
-		break;
-	default:
-		break;
-	}
-	*/
 	instr = new Instruction(instructionPosition, Itype, *dstVars, *srcVars);
 	instructions.push_back(instr);
 	instructionPosition++;
@@ -558,7 +497,7 @@ void SyntaxAnalysis::createMipsFile(const string path)
 
 		fout << "\n.text\n";
 
-		string instrs[] = {"add","addi","sub","la","li","lw","sw","bltz","b","NOP"};
+		string instrs[] = {"add","addi","sub","la","li","lw","sw","bltz","b","or","nor","jr","NOP"};
 		for (auto it = instructions.begin(); it != instructions.end(); it++)
 		{
 			fout << checkLabels((*it)->getPosition(), label_list);
@@ -593,8 +532,9 @@ void SyntaxAnalysis::createMipsFile(const string path)
 			case I_NOR:
 				fout << "$" << returnAssignedRegister((*it)->getDst().front()->getName()) << ", " << (*it)->getSrc().front()->getName() << ", $" << returnAssignedRegister((*it)->getDst().back()->getName()) << endl;
 				break;
-			case I_NOT:
+			case I_JR:
 				//TODO
+				fout << "$" << returnAssignedRegister((*it)->getDst().front()->getName()) << endl;
 			default:
 				break;
 			}

@@ -1,9 +1,9 @@
+/*Author: Papp Tamas Index: RA004/2022 Datum: 2024.06.05*/
 #pragma once
 
 #include "LexicalAnalysis.h"
 #include "IR.h"
 #include "LivenessAnalysis.h"
-
 #include "Labels.h"
 using namespace std;
 

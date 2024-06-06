@@ -1,3 +1,4 @@
+/*Author: Papp Tamas Index: RA004/2022 Datum: 2024.06.05*/
 #pragma once
 
 #include "IR.h"

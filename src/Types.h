@@ -1,3 +1,4 @@
+/*Author: Papp Tamas Index: RA004/2022 Datum: 2024.06.05*/
 #ifndef __TYPES__
 #define __TYPES__
 
@@ -40,7 +41,7 @@ enum TokenType
 	// added token types
 	T_OR,			//or
 	T_NOR,			//nor
-	T_NOT,			//not
+	T_JR,			//not
 
 	// operators
 	T_COMMA,		//,
@@ -75,7 +76,7 @@ enum InstructionType
 	//added instrctions
 	I_OR,
 	I_NOR,
-	I_NOT
+	I_JR
 };
 
 /**

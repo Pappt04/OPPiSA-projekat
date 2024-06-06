@@ -1,3 +1,4 @@
+/*Author: Papp Tamas Index: RA004/2022 Datum: 2024.06.05*/
 #include "IR.h"
 
 #include "Types.h"
@@ -32,8 +33,7 @@ void Variable::setName(std::string s) { m_name = s; }
 
 void Variable::setValue(int i) { m_value = i; }
 
-void Variable::setType(VariableType vt) { m_type = vt;
-}
+void Variable::setType(VariableType vt) { m_type = vt; }
 
 void Variable::setPosition(int p) {	m_position = p; }
 
@@ -130,6 +130,7 @@ void Instruction::fillVariables_Fill_Def()
 	case I_LI: // li rid, num
 	case I_LW: // lw rid, num(rid)
 	case I_SW: // sw rid, num(rid)
+	case I_JR: // jr rid
 		for (auto it = m_dst.begin(); it != m_dst.end(); it++)
 		{
 			m_def.push_back(*it);

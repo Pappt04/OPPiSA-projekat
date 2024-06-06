@@ -1,6 +1,6 @@
+/*Author: Papp Tamas Index: RA004/2022 Datum: 2024.06.05*/
 #include <exception>
 #include <iostream>
-
 #include "LexicalAnalysis.h"
 #include "SyntaxAnalysis.h"
 #include "LivenessAnalysis.h"

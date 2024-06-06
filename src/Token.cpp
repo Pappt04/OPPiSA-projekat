@@ -1,3 +1,4 @@
+/*Author: Papp Tamas Index: RA004/2022 Datum: 2024.06.05*/
 #include <iostream>
 #include <iomanip>
 
@@ -103,7 +104,7 @@ string Token::tokenTypeToString(TokenType t)
 		case T_ERROR:			return "[T_ERROR]";
 		case T_OR:				return "[T_OR]";
 		case T_NOR:				return "[T_NOR]";
-		case T_NOT:				return "[T_NOT]";
+		case T_JR:				return "[T_JR]";
 		default:				return "";
 	}
 }

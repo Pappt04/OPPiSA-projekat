@@ -1,3 +1,4 @@
+/*Author: Papp Tamas Index: RA004/2022 Datum: 2024.06.05*/
 #ifndef __IR__
 #define __IR__
 
@@ -115,8 +116,14 @@ public:
 	void setSucc(Instruction* succ);
 	void setPred(Instruction* pred);
 	
+	/**
+	* Fills define and use listst from source and destination list based on usage 
+	*/
 	void fillVariables_Fill_Def();
 
+	/**
+	* Operator overload for Instruction class
+	*/
 	friend ostream& operator<<(ostream& out, const Instruction& ins);
 };
 
